@@ -80,7 +80,7 @@ Ready for a manual review
 
 **Link to your project review**
 
-https://alx-intranet.hbtn.io/corrections/108394/correct
+https://intranet.alxswe.com/corrections/20661524/correct
 
 [Cancel and continue to work on the project.](https://alx-intranet.hbtn.io/projects/324#)
 
