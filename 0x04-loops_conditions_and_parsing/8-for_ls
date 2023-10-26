@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script lists files and directories, displays only part after first dash
+
+list=$(ls)
+for i in $list; do
+	echo "$i" | cut -d '-' -f2
+done
