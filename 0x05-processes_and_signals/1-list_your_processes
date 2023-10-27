@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Display list of currently running process in user-oriented format
+
+ps aux --sort=-%cpu,%mem | head -50
