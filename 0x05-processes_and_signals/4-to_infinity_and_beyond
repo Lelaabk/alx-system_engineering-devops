@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# This script displays "To infinity and beyond" indefinitely with 2-second sleep
 while true; do
 	echo "To infinity and beyond"
 	sleep 2
