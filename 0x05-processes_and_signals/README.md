@@ -91,6 +91,30 @@ Before you start working on the tasks, it's recommended to familiarize yourself 
      ```bash
      ./8-beheaded_process
      ```
+10. **Process and PID File (100-process-and-pid-file)**
+    - A Bash script that creates the file `/var/run/myscript.pid` containing its PID.
+    - Displays "To infinity and beyond" indefinitely, "I hate the kill command" when receiving a SIGTERM signal, and "Y U no love me?!" when receiving a SIGINT signal.
+    - Deletes the PID file and terminates itself when receiving a SIGQUIT or SIGTERM signal.
+    - Example usage:
+      ```bash
+      sudo ./100-process-and-pid-file
+      ```
+
+11. **Manage My Process (101-manage_my_process and manage_my_process)**
+    - A Bash script (`manage_my_process`) that writes "I am alive!" to the file `/tmp/my_process` indefinitely with a 2-second pause between each message.
+    - Another script (`101-manage_my_process`) manages `manage_my_process`, allowing starting, stopping, and restarting. It creates a PID file in `/var/run/my_process.pid`.
+    - Example usage:
+      ```bash
+      sudo ./101-manage_my_process start
+      ```
+
+12. **Zombie (102-zombie.c)**
+    - A C program that creates 5 zombie processes and displays a message for each zombie process created.
+    - Example usage:
+      ```bash
+      gcc 102-zombie.c -o zombie
+      ./zombie
+      ```
 
 Remember to follow the requirements for each script, and ensure they are executable and free of errors when checked with Shellcheck.
 
