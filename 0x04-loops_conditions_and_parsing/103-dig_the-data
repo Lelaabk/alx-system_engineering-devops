@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script groups visitora by IP and HTTP status code, and displays data
+
+#Use awk to count occurences and format the output
+awk '{count[$1, $9]++} END {for (key in count) {split(key, values, SUBSEP); printf "%6d %s %s\n", count[key], values[1], values[2]}}' apache-access.log | sort -nr
