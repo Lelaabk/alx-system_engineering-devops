@@ -34,5 +34,5 @@ elif [ "${1}" == "restart" ]; then
     echo "$!" > /var/run/my_process.pid
     echo "manage_my_process restarted"
 else
-	echo "Usage: manage_myprocess {start|stop|restart}"
+	echo "Usage: manage_my_process {start|stop|restart}"
 fi
