@@ -36,11 +36,11 @@ puts ARGV[0].scan(/your-regular-expression-here/).join
 
 Before starting the project, you can review the following resources to get a better understanding of regular expressions:
 
-- [Regular expressions - basics](Resource-Link-1)
-- [Regular expressions - advanced](Resource-Link-2)
+- [Regular expressions - basics](https://www.slideshare.net/neha_jain/introducing-regular-expressions)
+- [Regular expressions - advanced](https://www.slideshare.net/neha_jain/advanced-regular-expressions-80296518)
 - [Rubular](https://rubular.com/): An online tool for testing and experimenting with regular expressions.
 - "Use a regular expression against a problem: now you have 2 problems"
-- [Learn Regular Expressions with simple, interactive exercises](Resource-Link-3)
+- [Learn Regular Expressions with simple, interactive exercises](https://regexone.com/)
 
 ## Requirements
 
@@ -129,14 +129,57 @@ WHATSAY$
 $ ./7-OMG_WHY_ARE_YOU_SHOUTING.rb "cannot read you" | cat -e
 $
 ```
+### 8. Textme
+**Advanced**
+
+This exercise was prepared for you by Guillaume Plessis, VP of Infrastructure at TextMe. It is something he uses daily. You can thank Guillaume for his project on Twitter.
+
+For this task, you’ll be taking over Guillaume’s responsibilities: one afternoon, a TextMe VoIP Engineer comes to you and explains she wants to run some statistics on the TextMe app text messages transactions.
+
+**Requirements:**
+
+- Your script should output: [SENDER],[RECEIVER],[FLAGS]
+
+- The sender phone number or name (including country code if present)
+
+- The receiver phone number or name (including country code if present)
+
+- The flags that were used
+
+- You can find a [log file here].
+
+**Example:**
+
+```shell
+$ ./100-textme.rb 'Feb 1 11:00:00 ip-10-0-0-11 mdr: 2016-02-01 11:00:00 Receive SMS [SMSC:SYBASE1] [SVC:] [ACT:] [BINF:] [FID:] [from:Google] [to:+16474951758] [flags:-1:0:-1:0:-1] [msg:127:This planet has - or rather had - a problem, which was this: most of the people on it were unhappy for pretty much of the time.] [udh:0:]'
+Google,+16474951758,-1:0:-1:0:-1
+$
+$
+$ ./100-textme.rb 'Feb 1 11:00:00 ip-10-0-64-10 mdr: 2016-02-01 11:00:00 Receive SMS [SMSC:SYBASE2] [SVC:] [ACT:] [BINF:] [FID:] [from:+17272713208] [to:+19172319348] [flags:-1:0:-1:0:-1] [msg:136:Orbiting this at a distance of roughly ninety-two million miles is an utterly insignificant little blue green planet whose ape-descended] [udh:0:]'
++17272713208,+19172319348,-1:0:-1:0:-1
+$
+$ ./100-textme.rb 'Feb 1 11:00:00 ip-10-0-64-11 mdr: 2016-02-01 11:00:00 Sent SMS [SMSC:SYBASE1] [SVC:backendtextme] [ACT:] [BINF:] [FID:] [from:18572406905] [to:14022180266] [flags:-1:0:-1:-1:-1] [msg:136:Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of the Galaxy lies a small unregarded yellow sun.] [udh:0:]'
+18572406905,14022180266,-1:0:-1:-1:-1
+$
+$
+$ ./100-textme.rb 'Feb 1 11:00:00 ip-10-0-64-11 mdr: 2016-02-01 11:00:00 Sent SMS [SMSC:SYBASE1] [SVC:backendtextme] [ACT:] [BINF:] [FID:] [from:12392190384] [to:19148265919] [flags:-1:0:-1:-1:-1] [msg:99:life forms are so amazingly primitive that they still think digital watches are a pretty neat idea.] [udh:0:]'
+12392190384,19148265919,-1:0:-1:-1:-1
+$
+```
 
 ## Project Repository
 
-- **GitHub Repository**: [alx-system_engineering-devops](Repository-Link)
+- **GitHub Repository**: [alx-system_engineering-devops](https://github.com/Lelaabk/alx-system_engineering-devops/tree/main/0x06-regular_expressions)
 - **Directory**: 0x06-regular_expressions
 
-*Note: Replace "Resource-Link-1" and "Resource-Link-2" with appropriate URLs, and "Repository-Link" with the actual repository URL.*
 
+## Author
+This project was prepared by Layla ABKARI for the ALX System Engineering & DevOps program.
+
+- **LinkedIn Profile**: [Layla ABKARI](https://www.linkedin.com/in/layla-abkari-5505301a3/)
+
+Acknowledgments
+Special thanks to Guillaume Plessis, VP of Infrastructure at TextMe, and Neha Jain, Senior Software Engineer at LinkedIn, for their contributions to this project.
 ---
 
 Please feel free to reach out if you have any questions or need further assistance with the project. Good luck with your regular expression tasks!
