@@ -17,10 +17,10 @@ This project is part of the ALX School curriculum and is focused on Networking B
 By the end of this project, you are expected to be able to explain the following concepts without relying on external sources:
 
 ### General
-- What is localhost (127.0.0.1)?
-- What is 0.0.0.0?
-- What is the /etc/hosts file?
-- How to display your machine's active network interfaces.
+- [What is localhost (127.0.0.1)?](https://en.wikipedia.org/wiki/Localhost)
+- [What is 0.0.0.0?](https://en.wikipedia.org/wiki/0.0.0.0)
+- [What is the /etc/hosts file?](https://www.makeuseof.com/tag/modify-manage-hosts-file-linux/)
+- [How to display your machine's active network interfaces.](https://www.thegeekstuff.com/2012/04/nc-command-examples/)
 
 ## Copyright and Plagiarism
 As a student working on this project, it is essential to come up with your solutions to meet the learning objectives. Plagiarism in any form is strictly forbidden and will result in removal from the program. Do not publish any content related to this project.
