@@ -80,7 +80,7 @@ Upon completion of this project, you should be able to:
 
 **Add URLs:**
 - [GitHub Repository](https://github.com/Lelaabk/alx-system_engineering-devops/tree/main/0x09-web_infrastructure_design)
-- [Screenshot of Whiteboard Diagram](#)
+- [Screenshot of Whiteboard Diagram](https://github.com/Lelaabk/alx-system_engineering-devops/blob/main/0x09-web_infrastructure_design/Screenshots/Simple%20web%20stack.png)
 
 ### 1. Distributed Web Infrastructure
 
@@ -92,7 +92,7 @@ Upon completion of this project, you should be able to:
 
 **Add URLs:**
 - [GitHub Repository](https://github.com/Lelaabk/alx-system_engineering-devops/tree/main/0x09-web_infrastructure_design)
-- [Screenshot of Whiteboard Diagram](#)
+- [Screenshot of Whiteboard Diagram](https://github.com/Lelaabk/alx-system_engineering-devops/blob/main/0x09-web_infrastructure_design/Screenshots/Distributed%20web%20infrastructure.png)
 
 ### 2. Secured and Monitored Web Infrastructure
 
