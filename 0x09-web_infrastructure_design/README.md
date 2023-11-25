@@ -27,20 +27,20 @@ This project covers the following key concepts:
 
 Before starting the tasks, it is recommended to read or watch the following resources:
 
-- [Network basics concept page](#)
-- [Server concept page](#)
-- [Web server concept page](#)
-- [DNS concept page](#)
-- [Load balancer concept page](#)
-- [Monitoring concept page](#)
-- [What is a database](#)
-- [Difference between a web server and an app server](#)
-- [DNS record types](#)
-- [Single point of failure](#)
-- [Avoiding downtime when deploying new code](#)
-- [High availability cluster (active-active/active-passive)](#)
-- [What is HTTPS](#)
-- [What is a firewall](#)
+- [Network basics concept page](https://intranet.alxswe.com/concepts/33)
+- [Server concept page](https://intranet.alxswe.com/concepts/67)
+- [Web server concept page](https://intranet.alxswe.com/concepts/17)
+- [DNS concept page](https://intranet.alxswe.com/concepts/12)
+- [Load balancer concept page](https://intranet.alxswe.com/concepts/46)
+- [Monitoring concept page](https://intranet.alxswe.com/concepts/13)
+- [What is a database](https://www.oracle.com/ke/database/what-is-database/)
+- [Difference between a web server and an app server](https://www.infoworld.com/article/2077354/app-server-web-server-what-s-the-difference.html)
+- [DNS record types](https://www.site24x7.com/learn/dns-record-types.html)
+- [Single point of failure](https://avinetworks.com/glossary/single-point-of-failure/)
+- [Avoiding downtime when deploying new code](https://softwareengineering.stackexchange.com/questions/35063/how-do-you-update-your-production-codebase-database-schema-without-causing-downt#answers-header)
+- [High availability cluster (active-active/active-passive)](https://docs.oracle.com/cd/E17904_01/core.1111/e10106/intro.htm#ASHIA714)
+- [What is HTTPS](https://www.instantssl.com/http-vs-https)
+- [What is a firewall](https://www.webopedia.com/definitions/firewall/)
 
 ## Learning Objectives
 
@@ -79,7 +79,7 @@ Upon completion of this project, you should be able to:
 - Identify issues: SPOF, downtime during maintenance, scalability.
 
 **Add URLs:**
-- [GitHub Repository](#)
+- [GitHub Repository](https://github.com/Lelaabk/alx-system_engineering-devops/tree/main/0x09-web_infrastructure_design)
 - [Screenshot of Whiteboard Diagram](#)
 
 ### 1. Distributed Web Infrastructure
@@ -91,7 +91,7 @@ Upon completion of this project, you should be able to:
 - Discuss distribution algorithm, Active-Active vs. Active-Passive, and Primary-Replica cluster.
 
 **Add URLs:**
-- [GitHub Repository](#)
+- [GitHub Repository](https://github.com/Lelaabk/alx-system_engineering-devops/tree/main/0x09-web_infrastructure_design)
 - [Screenshot of Whiteboard Diagram](#)
 
 ### 2. Secured and Monitored Web Infrastructure
@@ -103,9 +103,5 @@ Upon completion of this project, you should be able to:
 - Address issues: SSL termination, single writable MySQL server, uniform server components.
 
 **Add URLs:**
-- [GitHub Repository](#)
+- [GitHub Repository](https://github.com/Lelaabk/alx-system_engineering-devops/tree/main/0x09-web_infrastructure_design)
 - [Screenshot of Whiteboard Diagram](#)
-
-## Conclusion
-
-By completing these tasks, you will gain a deep understanding of web infrastructure design concepts and their practical implementation. Remember to adhere to the project guidelines, whiteboard each task, and provide the required documentation and URLs. Good luck!
