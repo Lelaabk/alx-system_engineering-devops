@@ -104,4 +104,15 @@ Upon completion of this project, you should be able to:
 
 **Add URLs:**
 - [GitHub Repository](https://github.com/Lelaabk/alx-system_engineering-devops/tree/main/0x09-web_infrastructure_design)
-- [Screenshot of Whiteboard Diagram](#)
+- [Screenshot of Whiteboard Diagram](https://github.com/Lelaabk/alx-system_engineering-devops/blob/main/0x09-web_infrastructure_design/Screenshots/Secured%20and%20monitored%20web%20infrastructure.png)
+
+### 3. Scale Up Task
+
+**Requirements:**
+- Enhance the scalability of your existing web infrastructure.
+- Components: 1 server, 1 HAproxy load balancer configured as a cluster, split components (web server, application server, database).
+- Explain the purpose of each additional element.
+
+**Add URLs:**
+- [GitHub Repository](https://github.com/Lelaabk/alx-system_engineering-devops/tree/main/0x09-web_infrastructure_design)
+- [Screenshot of Whiteboard Diagram](https://github.com/Lelaabk/alx-system_engineering-devops/blob/main/0x09-web_infrastructure_design/Screenshots/Scale%20up.png)
