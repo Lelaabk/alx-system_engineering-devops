@@ -1,6 +1,6 @@
 # ALX System Engineering and DevOps
 
-![ALX Logo](https://github.com/Lelaabk/alx-system_engineering-devops/blob/main/alx_logo.png)
+![ALX Logo](https://miro.medium.com/v2/resize:fit:180/1*E1LonYGC5Fx4QLY4W5SaVA.jpeg)
 
 ## Overview
 
