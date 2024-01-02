@@ -35,5 +35,5 @@ If you encounter issues running the script or have questions, consider the follo
 - Feel free to explore and modify the script based on your debugging approach.
 
 ## Author
-Layla ABKARI
-Email:[lolabkari@gmail.com](https://mail.google.com/)
+- Layla ABKARI
+- Email: [lolabkari@gmail.com](https://mail.google.com/)
