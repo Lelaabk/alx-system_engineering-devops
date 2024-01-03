@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# Install and configure Nginx web server on Ubuntu
+
+apt-get update
+apt-get install -y nginx
+
+#Create simple HTML page
+#echo "Hello World!" > /usr/share/nginx/html/index.html
+
+#Make sure Nginx is listening on port 80
+echo "server {
+    listen 80 ;
+    listen [::]:80;
+    root /var/www/html;
+    index index.html;
+    server_name _;
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+    location / {
+        try_files \$uri \$uri/ =404;
+    }
+    error_page 404 /404.html;
+    location = /404.html {
+        root /var/www/html;
+        internal;
+    }
+}" > /etc/nginx/sites-available/default
+
+#Create simple HTML page
+sudo echo "Hello World!" > sudo tee /var/www/html/index.html
+sudo echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+#Restart Nginx
+service nginx restart
