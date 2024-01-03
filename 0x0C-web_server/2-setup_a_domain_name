@@ -1,2 +1,2 @@
-#!/usr/bin/env bash
-devlela.tech
+#!/bin/bash
+echo "devlela.tech"
