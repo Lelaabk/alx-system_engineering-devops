@@ -16,7 +16,7 @@ server {
     root /var/www/html;
     index index.html index.htm;
 
-    erver_name 375416-web-01;
+    server_name 375416-web-01;
 
     location / {
         try_files \$uri \$uri/ =404;
