@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Configure Nginx to add a custom HTTP response header
+
+sudo apt-get update
+sudo apt-get -y install nginx
+
+nginx_conf="/etc/nginx/sites-available/default"
+
+echo "Adding custom HTTP response header to $nginx_conf"
+sudo sed -i '/server_name localhost;/a \ \n\t# Add custom header for load balancing\n\tadd_header X-Served-By $HOSTNAME;' "$nginx_conf"
+
+sudo service nginx restart
