@@ -2,11 +2,35 @@
 # Configure Nginx to add a custom HTTP response header
 
 sudo apt-get update
-sudo apt-get -y install nginx
+sudo apt-get install -y nginx
 
-nginx_conf="/etc/nginx/sites-available/default"
+sudo ufw allow 'Nginx HTTP'
 
-echo "Adding custom HTTP response header to $nginx_conf"
-sudo sed -i '/server_name localhost;/a \ \n\t# Add custom header for load balancing\n\tadd_header X-Served-By $HOSTNAME;' "$nginx_conf"
+sudo echo "Hello World!" | sudo tee /var/www/html/index.html
+
+sudo cp /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default.backup
+
+
+nginx_redirection="        location /redirect_me {
+                 return 301 https://www.youtube.com/watch?v=gfiqW1WaGbw;
+        }"
+
+sudo sed -i '53r /dev/stdin' /etc/nginx/sites-enabled/default <<< "$nginx_redirection"
+
+#404 page
+sudo echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
+
+error="        error_page 404 /custom_404.html;
+        location = /custom_404.html {
+                 root /var/www/html;
+                 internal;
+        }"
+sudo sed -i '53r /dev/stdin' /etc/nginx/sites-enabled/default <<< "$error"
+
+#HTTP Configuration
+hostname_h=$(hostname)
+header_h="         add_header X-Served-By ${hostname_h};"
+
+sudo sed -i '51r /dev/stdin' /etc/nginx/sites-enabled/default <<< "$header_h"
 
 sudo service nginx restart
