@@ -1,49 +1,25 @@
 #!/usr/bin/env bash
-# 1-haproxy_ssl_termination
+# Install HAproxy
 
-global
-    log     /dev/log local0
-    maxconn 2048
-    user    haproxy
-    group   haproxy
-    tune.ssl.default-dh-param 2048
+sudo apt-get update
+sudo apt-get install -y haproxy
 
-defaults
-    log     global
-    mode    http
-    option  httplog
-    option  dontlognull
-    retries 3
-    option  redispatch
-    timeout connect  5000
-    timeout client  10000
-    timeout server  10000
-    option  forwardfor
-    option  http-server-close
-    errorfile 400 /etc/haproxy/errors/400.http
-    errorfile 403 /etc/haproxy/errors/403.http
-    errorfile 408 /etc/haproxy/errors/408.http
-    errorfile 500 /etc/haproxy/errors/500.http
-    errorfile 502 /etc/haproxy/errors/502.http
-    errorfile 503 /etc/haproxy/errors/503.http
-    errorfile 504 /etc/haproxy/errors/504.http
+#Install Certbot
+sudo apt-get install -y certbot
 
-frontend www-http
-    bind   0.0.0.0:80
-    http-request add-header X-Forwarded-Proto http
-    default_backend www-backend
+suco certbot certonly --standalone -d www.yourdomain.com
 
+#Configure HAProxy
+cat <<EOF | sudo tee /etc/haproxy/haproxy.cfg
 frontend www-https
-    bind   0.0.0.0:443 ssl crt /etc/letsencrypt/archive/www.jtechofficial.tech/www.jtechofficial.tech.pem
-    http-request add-header X-Forwarded-Proto https
-    acl    letsencrypt-acl path_beg /.well-known/acme-challenge/
-    use_backend letsencrypt-backend if letsencrypt-acl
+    bind *:443 ssl crt /etc/letsencrypt/live/www.yourdomain.com/fullchain.pem
+    reqadd X-Forwarded-Proto:\ https
     default_backend www-backend
-backend www-backend
-    balance  roundrobin
-    redirect scheme https if !{ ssl_fc }
-    server 219560-web-01 54.87.294.2:80 check
-    server 219560-web-02 54.89.199.20:80 check
 
-backend letsencrypt-backend
-    server letsencrypt 127.0.0.1:54321
+backend www-backend
+    balance roundrobin
+    server web-server-1 your_web_server_1_ip:your_web_server_1_port check
+    server web-server-2 your_web_server_2_ip:your_web_server_2_port check
+EOF
+
+sudo service haproxy restart
