@@ -7,7 +7,7 @@ sudo apt-get install -y haproxy
 #Install Certbot
 sudo apt-get install -y certbot
 
-suco certbot certonly --standalone -d www.yourdomain.com
+sudo certbot certonly --standalone -d www.yourdomain.com
 
 #Configure HAProxy
 cat <<EOF | sudo tee /etc/haproxy/haproxy.cfg
@@ -18,8 +18,9 @@ frontend www-https
 
 backend www-backend
     balance roundrobin
-    server web-server-1 your_web_server_1_ip:your_web_server_1_port check
-    server web-server-2 your_web_server_2_ip:your_web_server_2_port check
+    server web-server-1 192.168.1.1:80 check
+    server web-server-2 192.168.1.2:80 check
+
 EOF
 
 sudo service haproxy restart

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# 100-redirect_http_to_https
+# Add following lines to your existing HAProxy configuration file (/etc/haproxy/haproxy.cfg)
+
+frontend http-frontend
+    bind *:80
+    mode http
+    redirect scheme https code 301 if !{ ssl_fc }
