@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# 1-haproxy_ssl_termination
+
 global
     log     /dev/log local0
     maxconn 2048
