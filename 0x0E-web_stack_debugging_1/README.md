@@ -10,9 +10,14 @@ This project focuses on debugging and fixing issues with an Nginx installation o
 
 Using debugging skills, the task involves identifying and fixing the issue preventing Nginx from listening on port 80. The solution is automated through a Bash script (`0-nginx_likes_port_80`), and this README provides instructions on its usage.
 
+### Task 1: Advanced - Debugging made short
+
+Continuing from Task 0, this advanced task requires creating a short and sweet Bash script (`1-debugging_made_short`) to configure Nginx to listen on port 80. The script is limited to 5 lines, respecting Bash script requirements and without using `&&`.
+
 ## Project Structure
 
 - `0-nginx_likes_port_80`: Bash script to configure Nginx to listen on port 80.
+- `1-debugging_made_short`: Short and sweet Bash script for advanced debugging.
 - `README.md`: Project documentation.
 
 ## Requirements
@@ -36,16 +41,28 @@ Using debugging skills, the task involves identifying and fixing the issue preve
     cd alx-system_engineering-devops/0x0E-web_stack_debugging_1
     ```
 
-2. Make the script executable:
+2. Task 0: Make the script executable:
 
     ```bash
     chmod +x 0-nginx_likes_port_80
     ```
 
-3. Run the script:
+    Run the script:
 
     ```bash
     ./0-nginx_likes_port_80 > /dev/null 2&>1
+    ```
+
+3. Task 1: Make the script executable:
+
+    ```bash
+    chmod +x 1-debugging_made_short
+    ```
+
+    Run the script:
+
+    ```bash
+    ./1-debugging_made_short
     ```
 
 4. Verify Nginx is listening on port 80:
