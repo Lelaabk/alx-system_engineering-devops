@@ -37,6 +37,7 @@ if __name__ == "__main__":
     user_id = user_data.get('id')
     username = user_data.get('username')
     csv_filename = "{}.csv".format(user_id)
+    total_tasks = len(todo_data)
 
     with open(csv_filename, mode='w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
@@ -49,4 +50,5 @@ if __name__ == "__main__":
             csv_writer.writerow([user_id, username, str(task.get('completed')),
                                  task.get('title')])
 
-    print("Data exported to {}".format(csv_filename))
+    print("Employee {} tasks exported to {}".format(username, csv_filename))
+    print("Total tasks: {}".format(total_tasks))
