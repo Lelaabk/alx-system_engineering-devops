@@ -9,7 +9,8 @@ from sys import argv
 if __name__ == "__main__":
     user_id = argv[1]
     user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
-    todo_url = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(user_id)
+    todo_url = 'https://jsonplaceholder.typicode.com/todos?userId={}'
+    .format(user_id)
 
     # Fetch user data
     user_response = requests.get(user_url)
