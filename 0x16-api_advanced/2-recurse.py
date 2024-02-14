@@ -7,7 +7,7 @@ def recurse(subreddit, hot_list=[], count=0, after='i'):
     """
     Queries Reddit Api and returns list containing titles of all hot articles.
     """
-    site = "https://www.reddit.com"
+    site = 'https://www.reddit.com/'
     endpoint = 'r/{}/hot.json'.format(subreddit)
     query = '?show="all"&limit=100&count={}'.format(count)
     if after:
