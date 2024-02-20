@@ -3,15 +3,6 @@
 ## Description
 This project focuses on debugging and improving the performance of a web server setup featuring Nginx. The task involves identifying and resolving issues causing a high rate of failed requests under pressure. The debugging process utilizes tools like ApacheBench and involves modifying server configurations to achieve optimal performance.
 
-## Curriculum
-- **SE Foundations**
-  - Average: 127.0%
-  - Web stack debugging #4
-- **DevOps**
-- **SysAdmin**
-- **Scripting**
-- **Debugging**
-
 ## Requirements
 ### General
 - All files interpreted on Ubuntu 14.04 LTS
@@ -46,7 +37,7 @@ $ gem install puppet-lint -v 2.1.1
    ```
 
 ## Repository
-- **GitHub Repository**: [alx-system_engineering-devops](https://github.com/Lelaabk/alx-system_engineering-devops)
+- **GitHub Repository**: [alx-system_engineering-devops](https://github.com/Lelaabk/alx-system_engineering-devops/tree/main/0x1B-web_stack_debugging_4)
 - **Directory**: `0x1B-web_stack_debugging_4`
 - **Files**:
   - `0-the_sky_is_the_limit_not.pp`
