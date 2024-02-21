@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#[Unit]
+Description=Gunicorn instance to serve AirBnB Clone
+# Start at availability of network
+After=network.target
+
+[Service]
+# Run Ubuntu & set working dir
+User=ubuntu
+WorkingDirectory=/home/ubuntu/AirBnB_clone_v4
+
+# Start Gunicorn
+ExecStart=gunicorn --workers 3 --bind 0.0.0.0:5003 web_dynamic.2-hbnb:app
+Restart=always
+StandardOutput=append:/tmp/airbnb-access.log
+StandardError=append:/tmp/airbnb-error.log
+
+[Install]
+#Enable service for multi user target
+WantedBy=multi-user.target
